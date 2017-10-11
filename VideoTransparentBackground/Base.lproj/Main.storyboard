@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WOf-Mr-rmd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ArialRoundedMTBold.ttf">
+            <string>ArialRoundedMTBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Video with transparent background-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VideoTransparentBackground" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorte do Bem" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhB-3l-fWk">
+                                <rect key="frame" x="115" y="321.5" width="145.5" height="25.5"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="22"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="128" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="iYx-qS-UWW" customClass="VideoView" customModule="VideoTransparentBackground" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83529411760000005" green="0.81960784310000001" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iYx-qS-UWW" secondAttribute="bottom" id="4WV-f6-z4j"/>
+                            <constraint firstItem="iYx-qS-UWW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="9NK-XV-FxJ"/>
+                            <constraint firstItem="iYx-qS-UWW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VOr-mO-TKI"/>
+                            <constraint firstItem="uhB-3l-fWk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zeu-8u-X0I"/>
+                            <constraint firstItem="uhB-3l-fWk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="b3X-Yr-JA9"/>
+                            <constraint firstAttribute="trailing" secondItem="iYx-qS-UWW" secondAttribute="trailing" id="eLH-7q-QnC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Video with transparent background" id="8E1-Vr-hge"/>
+                    <connections>
+                        <outlet property="videoView" destination="iYx-qS-UWW" id="uHy-qP-Ohl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="136.28185907046478"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bDU-QY-0sc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WOf-Mr-rmd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JUU-A2-dTo">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Bg9-Gy-OFW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K7G-iM-bvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="136.28185907046478"/>
+        </scene>
+    </scenes>
+</document>
